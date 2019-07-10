@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MVVM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="MVVM" />
+    <meta name="keywords" content="MVVM" />
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message.b.name" />
+        <div>{{message.b.name}}</div>
+        {{message.b.name}}
+    </div>
+    <script src="./mvvm/index.js"></script>
+    <script src="./mvvm/observe.js"></script>
+    <script src="./mvvm/watch.js"></script>
+    <script src="./mvvm/orderpublish.js"></script>
+    <script>
+        var vm = new MVVM({
+            el:"app",
+            data:{
+                message:{a:1,b:{name:"xxx"}},
+                name:"lebo"
+            }
+        });
+        
+    </script>
+</body>
+</html>
